@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <meta name="twitter:" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Day 3 Practice - Larry Bui</title>
+    </head>
+    <body>
+
+    <!-- Basic Container, Row, Columns
+        This section is
+        is in a div .container
+        after container is a .row
+        2 columns on medium and large screens, each taking up 4 column spaces, because of .col-md-4 on the divs
+        2 columns on a small screens, each taking up 6 column spaces, because of .col-sm-6
+        1 column, on extra small screens, each taking 12 column spaces, because .col-xs-# was not used and defaults to full width
+     -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <h1>Box 1</h1>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <h1>Box 2</h1>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <h1>Box 3</h1>
+            </div>
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+
+
+    <!-- Container, Row, Columns with an offset
+        This section is
+        is in a div .container
+        after container is a .row
+        2 columns on medium and large screens, each taking up 4 column spaces, because of .col-md-4 on the divs
+        the second column offsets(to the right) on medium screens by 4 spaces because of .col-md-offset-4
+        the column offset is resetted on large screen because of .col-lg-offset-0 and moves back to its regular place
+        1 column, on extra small and small screens, each taking 12 column spaces, because .col-xs-# or .col-sm-# was not used and defaults to full width
+        there is no offset on extra small or small screens
+     -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1>Box 4</h1>
+            </div>
+            <div class="col-md-4 col-md-offset-4 col-lg-offset-0">
+                <h1>Box 5</h1>
+            </div>
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+
+
+    <!-- Container, Row, Columns with pull and push
+        This section is
+        is in a div .container
+        after container is a .row
+        3 columns on medium and large screens, each taking up 4 column spaces, because of .col-md-4 on the divs
+        3 columns on small, each taking up 4 column spaces, because of .col-sm-4 on the divs
+        1 column, on extra small screens, each taking 12 column spaces, because .col-xs-# was not used and defaults to full width
+        the order of columns is Box 8, Box 7, Box 6 on extra small and small screens
+        the order of columns is Box 6, Box 7, Box 8 on medium and large screens via .col-md-push-# and .col-md-pull-#
+        the Box 8 column is pushed to the right by 8 column spaces on medium and large screens
+        the Box 6 column is pulled left by 8 column spaces on medium and large screens
+     -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-md-push-8">
+                <h1>Box 8</h1>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <h1>Box 7</h1>
+            </div>
+            <div class="col-md-4 col-sm-4 col-md-pull-8">
+                <h1>Box 6</h1>
+            </div>
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+
+
+    <!-- Container, Row, Columns and a column with nested row and columns
+        This section is
+        is in a div .container
+        after container is a .row
+        2 columns on medium and large screens, column 1 takes up 4 column spaces because of .col-md-4, column 2 takes up 8 spaces because of .col-md-8
+        1 column, on extra small and small screens, each taking 12 column spaces, because .col-xs-# and .col-sm-# was not used and defaults to full width
+        the second column has a nested row and columns
+        3 columns on a medium screen, each column takes up 4 column spaces within the .col-md-8 space
+        Because the columns are different heights I need a clearfix after column 3 to maintain the grid structure
+        The helper . visible-md-block .visible-lg-block makes it so we can only see the clearfix element on medium and large screens
+     -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1>Box 9</h1>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="glyphicon glyphicon-asterisk"></span>
+                        <h1>Box 10</h1>
+                        <p>I am a different Height</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="glyphicon glyphicon-asterisk"></span>
+                        <h1>Box 11</h1>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="glyphicon glyphicon-asterisk"></span>
+                        <h1>Box 12</h1>
+                    </div>
+
+                    <div class="clearfix visible-md-block visible-lg-block"></div>
+
+                    <div class="col-md-4">
+                        <span class="glyphicon glyphicon-asterisk"></span>
+                        <h1>Box 13</h1>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="glyphicon glyphicon-asterisk"></span>
+                        <h1>Box 14</h1>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="glyphicon glyphicon-asterisk"></span>
+                        <h1>Box 15</h1>
+                    </div>
+                </div> <!-- .row -->
+            </div>
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+
+
+    <script src="js/boostrap.min.js" charset="utf-8"></script>
+    </body>
+</html>
